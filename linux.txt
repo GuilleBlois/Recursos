@@ -1,0 +1,22 @@
+comandos linux:
+
+$ pwd: en qué carpeta estamos
+$ ls -la
+$ ll
+
+copiar recursivamente:
+$ cp -R origen destino
+
+renombrar (rename, move)
+$ mv origen destino
+
+crear directorio/carpeta
+$ mkdir nombre_carpeta
+
+permisos lectura, escritura y ejecución:
+$ chmod ...
+
+propietario de los ficheros / directorios
+
+$ chown ...
+

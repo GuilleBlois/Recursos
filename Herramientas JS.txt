@@ -1,0 +1,47 @@
+
+split(" ",4) // = php explode
+
+join(" ") // = php implode
+
+/*Scroll to top button*/
+
+    jQuery('#scrollToTop').hide();
+    jQuery(window).scroll(function(){
+        if (jQuery(this).scrollTop() > 100) {
+            jQuery('#scrollToTop').fadeIn();
+        } else {
+            jQuery('#scrollToTop').fadeOut();
+        }
+    });
+
+    jQuery('#scrollToTop').click(function(){
+        jQuery('html, body').animate({scrollTop : 0},800);
+        return false;
+    });
+
+/*----------------------------------------------------*/
+
+/*Height auto en animate*/
+
+jQuery(this).closest('#wp-category-archive-2').animate({ height: jQuery(this).closest('#wp-category-archive-2').get(0).scrollHeight}, 800, function(){
+	jQuery(this).closest('#wp-category-archive-2').height('auto');
+});
+
+/*----------------------------------------------------*/
+
+/*COMPROBAR POSICION DEL SCROLL PARA MOSTRAR U OCULTAR ALGO*/
+
+var scrollHeight = jQuery(document).height();
+var scrollPosition = jQuery(window).height() + jQuery(window).scrollTop();
+var btnPosition = jQuery(window).height() + jQuery('#hydsimple_booking_widget-3').offset().top;
+var footPosition = jQuery(window).height() + jQuery('.site-footer').offset().top;
+var footPc = (scrollHeight - footPosition) / scrollHeight; 
+var btnPc = (scrollHeight - btnPosition) / scrollHeight;		
+if ((scrollHeight - scrollPosition) / scrollHeight >= footPc && (scrollHeight - scrollPosition) / scrollHeight <= btnPc+0.07) {
+	jQuery('.btn-container').css('visibility','hidden');
+}else{
+	jQuery('.btn-container').css('visibility','visible');
+}
+
+/*----------------------------------------------------*/
+/* Cambio de prueba */

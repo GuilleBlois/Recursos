@@ -1,0 +1,8 @@
+
+explode(' ',$String); //Convertir Strign en Array 
+
+substr($l,0,2); // Coger parte de un string
+
+mb_detect_encoding($s) // Detectar codificacion de un caracter
+
+mb_convert_encoding(get_the_title(), "To", "From"); // Cambiar codificacion
